@@ -3,6 +3,8 @@ name = "vbo"
 version = "0.1.0"
 edition = "2021"
 description = "Parse and write VBOX Automotive file formats"
+license = "MIT"
+repository = "https://github.com/afonso360/vbo"
 
 [dependencies]
 log = "0.4"
