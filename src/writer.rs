@@ -1,5 +1,5 @@
 use std::io::Write;
-use crate::{ChannelName, Result, Error, Channel, ChannelValue};
+use crate::{Result, Error, Channel, ChannelValue};
 use time::{format_description, OffsetDateTime};
 
 pub struct Writer {
@@ -94,7 +94,7 @@ impl Writer {
 #[cfg(test)]
 mod tests {
     use std::io::Cursor;
-    use crate::ChannelUnit;
+    use crate::{ChannelName, ChannelUnit};
     use super::*;
 
     fn writer_contains(w: &Writer, s: &str) -> bool {
