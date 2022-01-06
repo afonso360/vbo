@@ -1,9 +1,9 @@
-use std::io::Write;
-
 mod error;
+mod writer;
+mod types;
 
 pub use error::*;
+pub use writer::*;
+pub use types::*;
 
-pub struct Writer<W: Write> {
-    sink: W,
-}
+pub use dms_coordinates::DMS;
