@@ -41,14 +41,9 @@ impl fmt::Display for ChannelName {
     }
 }
 
-impl From<String> for ChannelName {
-    fn from(s: String) -> Self {
-        ChannelName::from(s.as_str())
-    }
-}
-
-impl<'a> From<&'a str> for ChannelName {
-    fn from(s: &'a str) -> Self {
+impl<T: AsRef<str>> From<T> for ChannelName {
+    fn from(s: T) -> Self {
+        let s = s.as_ref();
         match s {
             "satellites" => ChannelName::Satellites,
             "time" => ChannelName::Time,

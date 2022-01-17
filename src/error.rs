@@ -8,7 +8,6 @@ pub enum Error {
     IOError(std::io::Error),
     TimeFormatError(time::error::Format),
     DuplicateChannel(ChannelName),
-
 }
 
 impl std::error::Error for Error {}
